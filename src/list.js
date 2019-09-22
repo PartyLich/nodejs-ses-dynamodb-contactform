@@ -10,7 +10,7 @@ const dynamodb = new DynamoDB.DocumentClient();
  * @return {object}
  */
 export const list = async (event, context) => {
-  const TableName = process.env['DYNAMODB_TABLE'];
+  const TableName = process.env.DYNAMODB_TABLE;
 
   // fetch all records from database
   try {
@@ -20,7 +20,7 @@ export const list = async (event, context) => {
 
     return {
       statusCode: 200,
-      body: result['Items'],
+      body: result.Items,
     };
   } catch (e) {
     console.error(e);
