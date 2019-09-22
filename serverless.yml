@@ -38,3 +38,35 @@ provider:
 functions:
   hello:
     handler: ./src/handler.hello
+  sendMail:
+    handler: ./src/handler.sendMail
+    description: Send Email using AWS SES Service
+    events:
+      - http:
+          path: sendMail
+          method: post
+          integration: lambda
+          cors: true
+          response:
+            headers:
+              "Access-Control-Allow_Origin": "'*'"
+
+# CloudFormation resource templates here
+resources:
+  Resources:
+    ContactFormDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+          -
+            AttributeName: id
+            AttributeType: S
+        KeySchema:
+          -
+            AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        TableName: ${self:provider.environment.DYNAMODB_TABLE}

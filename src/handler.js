@@ -19,6 +19,9 @@ const hello = async (event) => ({
   ),
 });
 
+import { sendMail } from './sendMail';
+
 export {
+  sendMail,
   hello,
 };
