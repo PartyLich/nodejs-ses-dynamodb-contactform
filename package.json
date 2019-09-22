@@ -1,0 +1,48 @@
+{
+  "name": "serverless-contact",
+  "version": "0.1.0",
+  "description": "Serverless Framework SES and DynamoDB Contact Form",
+  "main": "handler.js",
+  "scripts": {
+    "test": "babel-tape-runner **/*.test.js | faucet"
+  },
+  "keywords": [
+    "nodejs",
+    "serverless",
+    "serverless-framework",
+    "aws",
+    "aws-lambda",
+    "aws-ses",
+    "aws-dynamodb"
+  ],
+  "author": "PartyLich",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PartyLich/nodejs-ses-dynamodb-contactform.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-source-map-support": "^2.1.1",
+    "babel-tape-runner": "^3.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-google": "^0.13.0",
+    "faucet": "0.0.1",
+    "serverless-offline": "^5.11.0",
+    "serverless-webpack": "^5.3.1",
+    "tape": "^4.10.1",
+    "webpack": "^4.40.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.529.0",
+    "dotenv": "^8.1.0",
+    "source-map-support": "^0.5.13"
+  },
+  "homepage": "https://github.com/PartyLich/nodejs-ses-dynamodb-contactform#readme"
+}
