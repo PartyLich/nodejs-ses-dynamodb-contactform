@@ -15,6 +15,7 @@
     "aws-dynamodb"
   ],
   "author": "PartyLich",
+  "private": true,
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.4.4",
