@@ -9,13 +9,19 @@
   "keywords": [
     "nodejs",
     "serverless",
+    "serverless-framework",
     "aws",
     "aws-lambda",
     "aws-ses",
     "aws-dynamodb"
   ],
   "author": "PartyLich",
-  "license": "ISC",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PartyLich/nodejs-ses-dynamodb-contactform.git"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
@@ -37,5 +43,6 @@
     "aws-sdk": "^2.529.0",
     "dotenv": "^8.1.0",
     "source-map-support": "^0.5.13"
-  }
+  },
+  "homepage": "https://github.com/PartyLich/nodejs-ses-dynamodb-contactform#readme"
 }
