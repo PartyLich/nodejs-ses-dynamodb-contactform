@@ -20,8 +20,10 @@ const hello = async (event) => ({
 });
 
 import { sendMail } from './sendMail';
+import { list } from './list';
 
 export {
   sendMail,
+  list,
   hello,
 };
